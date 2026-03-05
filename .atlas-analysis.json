@@ -1,0 +1,83 @@
+{
+  "projectType": "saas",
+  "projectName": "Chat Ochre",
+  "projectDescription": "React-based web application for real-time user and messaging management with Firebase.",
+  "theme": "almond",
+  "primaryColor": "#040404",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/authentication",
+              "features/messaging",
+              "features/user-profiles",
+              "features/theme-customization"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/firebase-setup",
+              "guides/deployment",
+              "guides/environment-variables"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developer Reference",
+        "groups": [
+          {
+            "group": "Architecture",
+            "pages": [
+              "architecture/overview",
+              "architecture/data-model",
+              "architecture/project-structure"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/auth-services",
+              "api/chat-services",
+              "api/profile-services"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Firebase Authentication (sign up, sign in)",
+    "Real-time messaging between users",
+    "User profile management (name, avatar, password)",
+    "Light/dark theme support",
+    "Toast notifications",
+    "Direct messages stored in Firestore"
+  ],
+  "publicApiSurface": [
+    "loginUser(email, password)",
+    "registerUser(email, password)",
+    "createUser(user)",
+    "subscribeToUsers(onUpdate, onError)",
+    "addMessage(uidSender, uidReceiver, messageText)",
+    "getMessages(uidAuth, uidReceiver)",
+    "createNewChat(uidAuth, uidReceiver)",
+    "getUserById(uid)",
+    "changePassword(user, newPassword)",
+    "updateUserData({user, displayName, avatarFile})"
+  ]
+}
